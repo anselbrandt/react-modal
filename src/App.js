@@ -10,6 +10,8 @@ function App() {
   // Call hook passing in the ref and a function to call on outside click
   useOnClickOutside(ref, () => setModalOpen(false));
 
+  const handeSetModalOpen = () => setModalOpen(true);
+
   return (
     <div className={styles.app}>
       {isModalOpen ? (
@@ -17,7 +19,7 @@ function App() {
           Click anywhere outside to close.
         </div>
       ) : (
-        <button onClick={() => setModalOpen(true)}>Open Modal</button>
+        <button onClick={() => handeSetModalOpen()}>Open Modal</button>
       )}
     </div>
   );
